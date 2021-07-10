@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  max-width: 500px;
+  margin: 30px auto;
+  overflow: auto;
+  min-height: 300px;
+  border: 1px solid steelblue;
+  padding: 30px;
+  border-radius: 5px;
+}
+
+.header {
+  display: flex;
+  justify-content:center;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 15px;
+  font-family: inherit;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+.task {
+  background: #f4f4f4;
+  margin: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.task.reminder {
+  border-left: 5px solid green;
+}
+
+
+.h3_title {
+  border: 5px solid green;
+  background-color: green;
+  /* display: inline-block; */
+  padding-top: 31px;
+  padding-bottom: 31px;
+  text-align: center;
+  font-size: 29px;
+  border-radius: 8px;
+}
+
+/* .task h3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+} */
+
+
+.add-form {
+  margin-bottom: 40px;
+}
+
+.form-control {
+  margin: 20px 0;
+}
+
+.form-control label {
+  display: block;
+}
+
+.form-control input {
+  width: 100%;
+  height: 40px;
+  margin: 5px;
+  padding: 3px 7px;
+  font-size: 17px;
+}
+
+.form-control-check {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form-control-check label {
+  flex: 1;
+}
+
+.form-control-check input {
+  flex: 2;
+  height: 20px;
+}
+
+footer {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.checkbox {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+}
+
+.layeritem_column_row
+	{
+		flex-direction: row;
+		padding-top: 5px;
+		border:solid grey 1px;
+		width:100%;
+	}
+	.layerOneInner
+	{
+		width:18em;
+		display: flex;
+		flex-direction: column;
+		border:solid black 2px;
+		text-align:center;
+	}
+  #layerOneOuter
+	{
+		display: flex;
+		flex-wrap: nowrap;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: flex-start;
+	}
+
+  
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+}
+.flexDiv{
+  display:flex;
+  flex-direction: row;
+}
+.left {
+  padding-top: 18px;
+    float: left;
+    padding-bottom: 18px;
+  width: 30%; /* The width is 20%, by default */
+}
+input[id=choice] {
+  margin: 2px;
+}
+.middle {
+  background-color: #f1f1f1;
+  padding: 20px;
+  float: left;
+  justify-content: space-between;
+  width: 30%; /* The width is 60%, by default */
+}
+
+.right {
+  background-color: #f1f1f1;
+  padding: 20px;
+  float: left;
+  justify-content: space-between;
+  width: 30%; /* The width is 60%, by default */
+}
+/* 
+.right {
+  background-color: #4CAF50;
+  padding: 20px;
+  float: left;
+  width: 20%; /* The width is 20%, by default 
+} 
+*/
+
+/* Use a media query to add a break point at 800px: */
