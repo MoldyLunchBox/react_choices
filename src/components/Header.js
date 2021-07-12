@@ -90,24 +90,19 @@ const Header = ({ title }) => {
                               onChange={() => handleOnChange2(index)}
                               />
                             <label htmlFor={`custom-checkbox-${index}`}>{name}</label>
-                        
                         </div>
-                   
                    );
                    return(
                        <div></div>
                    )
-
                 }
                 )
             }
             </span>
-            {/* <a href="https://react.school" target="_blank"> */}
             <Link to="/YoutubeEmbed">
-            <Button color='green' text="C'est parti !" onclick={ <YoutubeEmbed embedId="rokGy0huYEA" />} />
+            <Button color='green' text="C'est parti !" />
             </Link>
 
-{/* </a> */}
 
         </header>
     )
