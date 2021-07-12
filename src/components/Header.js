@@ -3,8 +3,32 @@ import Button from './Button'
 import PropTypes from 'prop-types'
 import CheckBox from './CheckBox'
 import Choice from './Choice'
+import {useState} from 'react'
+import Render from './Render'
+import { gender } from "../utils/gender";
+import { transport } from "../utils/transport";
+
 
 const Header = ({ title }) => {
+    const [checkedState, setCheckedState] = useState(
+        new Array(gender.length).fill(false)
+      );
+    
+    
+      const handleOnChange = (position) => {
+        const updatedCheckedState = checkedState.map((item, index) =>
+        index === position  ? !item : (index < 2 ? false : item)
+        );
+        setCheckedState(updatedCheckedState);
+      };
+    
+      const handleOnChange2 = (position) => {
+        const updatedCheckedState = checkedState.map((item, index) =>
+        index === position ? !item : item
+      );
+      
+      setCheckedState(updatedCheckedState);
+            };
     return (
         <header >
             {<h1 className='h3_title'>  {title}</h1>}
@@ -12,12 +36,38 @@ const Header = ({ title }) => {
                 <div class="left">
                     <Choice text='Je suis' />
                 </div>
-                <div class="middle">
-                    <CheckBox label='Homme' />
-                </div>
-                <div className='right'>
-                    <CheckBox label='Femme' />
-                </div>
+
+                {
+                    gender.map(({id, name}, index) => {
+                        if (index < 2)
+                    return (
+                        <div className="middle">
+                            <input
+                              type="checkbox"
+                              id={`custom-checkbox-${index}`}
+                              name={name}
+                              value={name}
+                              checked={checkedState[index]}
+                              onChange={() => handleOnChange(index)}
+                              />
+                            <label htmlFor={`custom-checkbox-${index}`}>{name}</label>
+                        
+                        </div>
+                   
+                   );
+                   return(
+                    <div></div>
+                ) 
+
+                }
+                )
+            }
+            {
+                 gender.map(({ id,name}, index) => {
+                    console.log(checkedState[index])
+                 })
+            }
+            
             </span>
 
             <span className='flexDiv'>
@@ -25,12 +75,31 @@ const Header = ({ title }) => {
                 <div class="left">
                     <Choice text='Je me déplace' />
                 </div>
-                <div class="middle">
-                    <CheckBox label='pied' />
-                </div>
-                <div className='right'>
-                    <CheckBox label='voiture' />
-                </div>
+                {
+                    gender.map(({id, name}, index) => {
+                        if (index >=2)
+                    return (
+                        <div className="middle">
+                            <input
+                              type="checkbox"
+                              id={`custom-checkbox-${index}`}
+                              name={name}
+                              value={name}
+                              checked={checkedState[index]}
+                              onChange={() => handleOnChange2(index)}
+                              />
+                            <label htmlFor={`custom-checkbox-${index}`}>{name}</label>
+                        
+                        </div>
+                   
+                   );
+                   return(
+                       <div></div>
+                   )
+
+                }
+                )
+            }
             </span>
             <Button color='green' text="C'est parti !" />
 

@@ -11,13 +11,14 @@ const CheckBox = ({label}) => {
         <label>
         <input
          id="choice"
+         name="name"
         type="checkbox"
         checked={checked}
         onChange={handleChange}
         />
         {label}
       </label>
-      <p>Is "Value 1" checked? {checked.toString()}</p>
+     {/* <p>Is "Value 1" checked? {checked.toString()}</p> */}
 
         </>    
       ) 
