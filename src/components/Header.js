@@ -6,7 +6,8 @@ import Choice from './Choice'
 import {useState} from 'react'
 import Render from './Render'
 import { gender } from "../utils/gender";
-import { transport } from "../utils/transport";
+import YoutubeEmbed from "./YoutubeEmbed";
+import {Link } from "react-router-dom";
 
 
 const Header = ({ title }) => {
@@ -101,7 +102,12 @@ const Header = ({ title }) => {
                 )
             }
             </span>
-            <Button color='green' text="C'est parti !" />
+            {/* <a href="https://react.school" target="_blank"> */}
+            <Link to="/YoutubeEmbed">
+            <Button color='green' text="C'est parti !" onclick={ <YoutubeEmbed embedId="rokGy0huYEA" />} />
+            </Link>
+
+{/* </a> */}
 
         </header>
     )
