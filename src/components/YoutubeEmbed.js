@@ -1,12 +1,18 @@
 import React from "react";
 import PropTypes from "prop-types";
-import HommeVoiture from "../utils/Homme.jpg"
 import Button from "./Button"
 import {Link} from "react-router-dom"
-const YoutubeEmbed = () => {
+import ReactPlayer from "react-player"
+
+const YoutubeEmbed = (props) => {
+  const {foo} = props.location.state
+// console.log(foo) // "bar"
   return (
     <div>
-      <img src={HommeVoiture} alt="HommeVoiture"/>
+      <ReactPlayer   width='500px'
+        
+        url={`https://www.youtube.com/watch?v=${foo}`}
+      />
       <Link to="/">
         <Button button="green" text="retour"/>
       </Link>

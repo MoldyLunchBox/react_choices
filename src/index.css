@@ -1,10 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+
 
 body {
   font-family: 'Poppins', sans-serif;
@@ -42,34 +38,13 @@ body {
   font-family: inherit;
 }
 
-.btn:focus {
-  outline: none;
-}
-
-.btn:active {
-  transform: scale(0.98);
-}
-
-.btn-block {
-  display: block;
-  width: 100%;
-}
-
-.task {
-  background: #f4f4f4;
-  margin: 5px;
-  padding: 10px 20px;
-  cursor: pointer;
-}
-
-.task.reminder {
-  border-left: 5px solid green;
-}
 
 
 .h3_title {
   border: 5px solid green;
   background-color: green;
+  color: #ffff;
+  //font-family: "Lucida Console", "Courier New", monospace;
   /* display: inline-block; */
   padding-top: 31px;
   padding-bottom: 31px;
@@ -84,46 +59,6 @@ body {
   justify-content: space-between;
 } */
 
-
-.add-form {
-  margin-bottom: 40px;
-}
-
-.form-control {
-  margin: 20px 0;
-}
-
-.form-control label {
-  display: block;
-}
-
-.form-control input {
-  width: 100%;
-  height: 40px;
-  margin: 5px;
-  padding: 3px 7px;
-  font-size: 17px;
-}
-
-.form-control-check {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.form-control-check label {
-  flex: 1;
-}
-
-.form-control-check input {
-  flex: 2;
-  height: 20px;
-}
-
-footer {
-  margin-top: 30px;
-  text-align: center;
-}
 
 .checkbox {
   display: flex;
@@ -182,9 +117,7 @@ footer {
     padding-bottom: 18px;
   width: 30%; /* The width is 20%, by default */
 }
-input[id=choice] {
-  margin: 2px;
-}
+
 .middle {
   background-color: #f1f1f1;
   padding: 20px;
@@ -214,17 +147,12 @@ input[id=choice] {
   width: 100%;
   position: absolute;
 }
-img {
-  width: 100%;
-  height: 100%;
-}
-/* 
-.right {
-  background-color: #4CAF50;
-  padding: 20px;
-  float: left;
-  width: 20%; /* The width is 20%, by default 
-} 
-*/
 
-/* Use a media query to add a break point at 800px: */
+
+a {
+  -webkit-transition: color 0.5s;
+  transition: color 0.5s;
+}
+a:hover {
+  color: blue;
+}
