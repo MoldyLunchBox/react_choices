@@ -23,5 +23,7 @@ nvm install node
 npx create-react-app my-app
 
 cd my-app
-
+----> clone my repo and replace existing files with mine
+npm install
 npm start
+
